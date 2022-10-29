@@ -1,116 +1,170 @@
 @use 'base' as *;
 
-@import url(//fonts.googleapis.com/css?family=Lato:300:400);
 
-body {
-  margin:0;
-}
-
-li{
-  list-style-type: none;
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1 {
-  font-family: 'Lato', sans-serif;
-  font-weight:300;
-  letter-spacing: 2px;
-  font-size:48px;
+a {
+    text-decoration: none;
 }
-p {
-  font-family: 'Lato', sans-serif;
-  letter-spacing: 1px;
-  font-size:14px;
-  color: #333333;
+button:hover{
+    cursor: pointer;
 }
+    
 
-.header {
-  position:relative;
-  text-align:center;
-  background: linear-gradient(60deg, rgb(242, 232, 153) 0%, rgb(231, 183, 62) 100%);
-  color:white;
+body{
+    height:100vh;
+    overscroll-behavior: none;
+header{
+    background-image: url(../images/mona-eendra-vC8wj_Kphak-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 750px;
+    // padding-bottom: 30px;
+    
+    
+    img{
+        width: 590px;
+        height: 750px;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    h1{
+        color: #1B4332;
+        font-weight: bold;
+        font-size: 78px;
+        font-family: $font-Sac;
+        padding-left: 30px;
+        padding-top: 50px;
+        visibility: hidden;    
+        text-shadow: 0px 3px 0px #b2a98f,
+                 0px 14px 10px rgba(0,0,0,0.15),
+                 0px 24px 2px rgba(0,0,0,0.1),
+                 0px 34px 30px rgba(0,0,0,0.1);
+    }
+    p{
+        color: #1B4332;
+        font-size: 46px;
+        font-family: $font-Rale;
+        padding-left: 80px;
+        padding-top: 0;
+        margin: 0;
+        visibility: hidden;  
+        text-shadow: 2;  
+    }
+    .wave{
+        height: 250px;
+        width: 212px;
+        background-color: rgba(254, 252, 252, 0.623);
+        position: relative;
+        // position: fixed;
+        left: 10px;
+        top: 8px;
+    }
+    ul{
+        position: absolute;
+        // position: fixed;
+        left: 2px;
+        top: 38px;
+    }
+    .nav-line{
+        font-family: $font-Sac;
+        font-size: $font-md;
+    }
+    .nav-line{
+        color: #1B4332;
+    }
 }
-.logo {
-  width:50px;
-  fill:white;
-  padding-right:15px;
-  display:inline-block;
-  vertical-align: middle;
-}
+    .container{
+        overscroll-behavior: none;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        // position:relative;
 
-// .nav_bar{
-//   background-color: #fff;
-//   width: 120px;
-// }
+        .top-text{
+            width: 460px;
+            // height: 800px;
+            padding-left: 40px;
+        }
 
-.inner-header {
-  height:65vh;
-  width:100%;
-  margin: 0;
-  padding: 0;
-}
+        h2{
+            font-family: $font-Right;
+            font-size: 40px;
+            color: #1B4332;
+            padding-left: 30px;
+        }
+        .topPage-text{
+            color: #1B4332;
+            font-size: $font-sm;
+            font-family: $font-Robo;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        .scroll-img{
+                width: 700px;
+                height: 800px;
+        }
+        .items-wrapper{
+            display: grid;
+            grid-template-columns: 200px 200px;
+            grid-template-rows: 200px 200px;
+            // width: 400px;
+            // display: flex;
+            // flex-wrap: wrap;
+        }
+        .team{
+            padding-bottom:12px;
+        }
+        
+        .item-img{
+            width: 150px;
+            height: 150px;
+            margin-top: 20px;
+        }
+        h3{
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 25px;
+            color: #C4C3DF;
+            font-family: $font-Rale;
+            
+        }
+        .Price{
+            margin-top: 5px;
+            padding-left: 38px;
+            // padding-bottom: 12px;
+            color: #C4C3DF;
+            font-family: $font-Rale;
+        }
+        .bp img{
+            transition: all .2s;
+                }
+        .ap img{
+            transition: all .2s;
+                }
+        button{
+            width: 132px;
+            height: 45px;
+            margin-left: 40px;
+            margin-top: 50px;
+            font-family: $font-Rale;
+            font-size: 16px;
+            color: #fff;
+            // font-weight: bolder;
+            background-color: #C4C3DF;
+            border: 2px solid #1B4332;
+            border-width: 0 0 8px 12px;
+            &:hover{
+            background-color: rgb(243, 180, 158);
+            }
+                }
+    }
+    }
 
-.flex { /*Flexbox for containers*/
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.waves {
-  position:relative;
-  width: 100%;
-  height:15vh;
-  margin-bottom:-7px; /*Fix for safari gap*/
-  min-height:100px;
-  max-height:150px;
-}
-
-.content {
-  position:relative;
-  height:20vh;
-  text-align:center;
-  background-color: white;
-}
-
-/* Animation */
-
-.parallax > use {
-  animation: move-forever 25s cubic-bezier(.55,.5,.45,.5)     infinite;
-}
-.parallax > use:nth-child(1) {
-  animation-delay: -2s;
-  animation-duration: 7s;
-}
-.parallax > use:nth-child(2) {
-  animation-delay: -3s;
-  animation-duration: 10s;
-}
-.parallax > use:nth-child(3) {
-  animation-delay: -4s;
-  animation-duration: 13s;
-}
-.parallax > use:nth-child(4) {
-  animation-delay: -5s;
-  animation-duration: 20s;
-}
-@keyframes move-forever {
-  0% {
-   transform: translate3d(-90px,0,0);
-  }
-  100% { 
-    transform: translate3d(85px,0,0);
-  }
-}
-/*Shrinking for mobile*/
-@media (max-width: 768px) {
-  .waves {
-    height:40px;
-    min-height:40px;
-  }
-  .content {
-    height:30vh;
-  }
-  h1 {
-    font-size:24px;
-  }
-}
