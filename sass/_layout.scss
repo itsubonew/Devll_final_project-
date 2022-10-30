@@ -57,6 +57,11 @@ header{
         visibility: hidden;  
         text-shadow: 2;  
     }
+    // .bag-icon svg{
+    //     // position: absolute;
+    //     // left: 320px;
+    //     margin-left: 300px;
+    // }
     .wave{
         height: 250px;
         width: 212px;
@@ -79,6 +84,7 @@ header{
     .nav-line{
         color: #1B4332;
     }
+    
 }
     .container{
         overscroll-behavior: none;
@@ -107,6 +113,7 @@ header{
             padding-left: 30px;
             padding-right: 30px;
         }
+        
         .scroll-img{
                 width: 700px;
                 height: 800px;
