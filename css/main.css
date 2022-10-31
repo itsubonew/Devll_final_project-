@@ -65,10 +65,10 @@ body header ul {
   top: 38px;
 }
 body header .nav-line {
-  font-family: "Sacramento", cursive;
-  font-size: 24px;
-}
-body header .nav-line {
+  font-family: "Raleway", sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+  line-height: 1.6;
   color: #1B4332;
 }
 body .container {
@@ -111,6 +111,12 @@ body .container .item-img {
   width: 150px;
   height: 150px;
   margin-top: 20px;
+  position: relative;
+  transition: 0.5s;
+}
+body .container .item-img:hover {
+  cursor: pointer;
+  opacity: 0.6;
 }
 body .container h3 {
   margin-top: 0;
